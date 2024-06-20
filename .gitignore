@@ -6,8 +6,6 @@
 # Node artifact files
 node_modules/
 dist/
-/forge/static/vacation-manager/build/
-/forge/static/permissionsUI/build/
 
 # Compiled Java class files
 *.class
@@ -49,7 +47,4 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
-# /forge/static
-/custom-ui/static/vacation-manager/src/react-app-env.d.ts
 
