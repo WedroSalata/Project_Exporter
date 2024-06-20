@@ -1,0 +1,6 @@
+{
+   "typescript.format.indentSwitchCase": false,
+   "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+   "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+   "editor.inlayHints.enabled": "off"
+}

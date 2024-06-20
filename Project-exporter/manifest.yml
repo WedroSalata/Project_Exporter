@@ -1,0 +1,35 @@
+modules:
+  jira:globalPage:
+    - key: project-exporter-hello-world-page
+      resource: main
+      layout: basic
+      resolver:
+        function: resolver
+      title: Project exporter
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: scheduler
+      handler: index.schedulerCheck
+  scheduledTrigger:
+    - key: my-scheduled-trigger
+      function: scheduler
+      interval: hour
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/16d36d11-17aa-40a1-8119-2f0a045040f4
+  runtime:
+    name: nodejs18.x
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+    scripts:
+      - unsafe-inline
+      - unsafe-hashes
+  scopes:
+    - storage:app
+    - read:jira-work
+    - write:jira-work
